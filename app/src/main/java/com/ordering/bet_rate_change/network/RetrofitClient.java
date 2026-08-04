@@ -7,8 +7,8 @@ public class RetrofitClient {
 
     private static Retrofit retrofit;
 
-//    private static final String BASE_URL = "http://192.168.1.47:6262/";
-    private static final String BASE_URL = "http://192.168.20.24:9092/";
+    private static final String BASE_URL = "http://192.168.1.47:6262/";
+//    private static final String BASE_URL = "http://192.168.20.24:9092/";
     // ⚠️ change if using real device
 
     public static Retrofit getClient() {

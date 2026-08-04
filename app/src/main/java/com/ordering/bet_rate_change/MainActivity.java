@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Make "LKR." smaller
         chipSpannable.setSpan(
-                new android.text.style.RelativeSizeSpan(0.5f), // 60% of main text
+                new android.text.style.RelativeSizeSpan(0.7f), // 60% of main text
                 0, 4, // "LKR."
                 android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
         );
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Make "LKR." smaller
         cashSpannable.setSpan(
-                new android.text.style.RelativeSizeSpan(0.4f),
+                new android.text.style.RelativeSizeSpan(0.6f),
                 0, 4, // "LKR."
                 android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
         );

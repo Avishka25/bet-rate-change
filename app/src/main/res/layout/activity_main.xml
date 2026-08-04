@@ -22,7 +22,7 @@
             android:orientation="vertical"
             android:gravity="bottom|center_horizontal"
             android:visibility="gone"
-            android:paddingBottom="100sp">
+            android:paddingBottom="130sp">
 
             <!-- BUY ROW -->
             <LinearLayout
@@ -37,9 +37,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="LKR. 500"
-                    android:textSize="95sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    android:textSize="120sp"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="25dp"
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="购买赌场筹码"
-                    android:textSize="75sp"
+                    android:textSize="50sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/white" />
 
@@ -68,9 +68,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="LKR. 400"
-                    android:textSize="75sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    android:textSize="90sp"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="25dp"
@@ -81,7 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="兑换现金"
-                    android:textSize="60sp"
+                    android:textSize="45sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/white" />
 
