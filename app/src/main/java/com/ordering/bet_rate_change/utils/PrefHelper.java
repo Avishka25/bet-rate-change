@@ -19,20 +19,20 @@ public class PrefHelper {
     }
 
     // ✅ SAVE DATA
-    public void saveChipData(int chipBuying, int cashOut) {
-        editor.putInt(KEY_CHIP_BUYING, chipBuying);
-        editor.putInt(KEY_CASH_OUT, cashOut);
+    public void saveChipData(double chipBuying, double cashOut) {
+        editor.putFloat(KEY_CHIP_BUYING, (float) chipBuying);
+        editor.putFloat(KEY_CASH_OUT, (float) cashOut);
         editor.apply(); // async save
     }
 
     // ✅ GET CHIP BUYING
-    public int getChipBuying() {
-        return sharedPreferences.getInt(KEY_CHIP_BUYING, 0);
+    public double getChipBuying() {
+        return sharedPreferences.getFloat(KEY_CHIP_BUYING, 0.0f);
     }
 
     // ✅ GET CASH OUT
-    public int getCashOut() {
-        return sharedPreferences.getInt(KEY_CASH_OUT, 0);
+    public double getCashOut() {
+        return sharedPreferences.getFloat(KEY_CASH_OUT, 0.0f);
     }
 
     // ✅ DELETE DATA

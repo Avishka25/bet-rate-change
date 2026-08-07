@@ -3,6 +3,7 @@ package com.ordering.bet_rate_change;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.SpannableString;
+import java.text.DecimalFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -102,11 +103,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateRateUI() {
 
-        int savedChip = prefHelper.getChipBuying();
-        int savedCash = prefHelper.getCashOut();
+        double savedChip = prefHelper.getChipBuying();
+        double savedCash = prefHelper.getCashOut();
+
+        DecimalFormat df = new DecimalFormat("#.##");
 
         // 🔹 Chip Buying
-        String chipText = "LKR. " + savedChip;
+        String chipText = "LKR. " + df.format(savedChip);
         SpannableString chipSpannable = new SpannableString(chipText);
 
         // Make "LKR." smaller
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         txtBuyValue.setText(chipSpannable);
 
         // 🔹 Cash Out
-        String cashText = "LKR. " + savedCash;
+        String cashText = "LKR. " + df.format(savedCash);
         SpannableString cashSpannable = new SpannableString(cashText);
 
         // Make "LKR." smaller
@@ -141,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
 
                 ChipTransaction data = transactions.get(0);
 
-                int chipBuying = data.getChip_Buying();
-                int cashOut = data.getCash_Out();
+                double chipBuying = data.getChip_Buying();
+                double cashOut = data.getCash_Out();
 
                 // ✅ SAVE every time API returns
                 prefHelper.saveChipData(chipBuying, cashOut);
